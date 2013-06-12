@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="nettyClient" class="me.o_nix.netty_spring.NettyClient" scope="prototype" abstract="true" />
+
+	<bean id="clientInitializer" class="me.o_nix.netty_spring.initializers.NettyClientChannelInitializer" scope="prototype" abstract="true" />
+
+	<bean id="nettyServer" class="me.o_nix.netty_spring.NettyServer" scope="prototype" abstract="true" />
+
+	<bean id="serverInitializer" class="me.o_nix.netty_spring.initializers.NettyServerChannelInitializer" scope="prototype" abstract="true" />
+
+	<bean id="loggingHandler" class="io.netty.handler.logging.LoggingHandler" scope="prototype">
+		<constructor-arg value="io.me.o_nix.netty_spring.handler.logging.LogLevel.TRACE" />
+	</bean>
+</beans>
