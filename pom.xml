@@ -1,17 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-    <groupId>me.o_nix</groupId>
-    <artifactId>netty-spring</artifactId>
-    <version>1.0-SNAPSHOT</version>
+	<groupId>me.o_nix</groupId>
+	<artifactId>netty-spring</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>${project.artifactId}</name>
+	<description>Netty configuration using Srping</description>
+	<url>https://github.com/o-nix/netty-spring</url>
+
+	<licenses>
+		<license>
+			<name>MIT</name>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<name>Kirill Vergun</name>
+		</developer>
+	</developers>
 
 	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<netty.version>4.0.0.CR1</netty.version>
 		<spring.version>3.2.3.RELEASE</spring.version>
 	</properties>
+
+	<scm>
+		<connection>scm:git:https://github.com/o-nix/netty-spring.git</connection>
+		<developerConnection>scm:git:git@github.com:o-nix/netty-spring.git</developerConnection>
+		<url>https://github.com/o-nix/netty-spring</url>
+	</scm>
 
 	<dependencies>
 		<dependency>
@@ -31,11 +57,29 @@
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
 				<configuration>
 					<source>1.7</source>
 					<target>1.7</target>
 				</configuration>
 			</plugin>
+
+			<plugin>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.4.1</version>
+				<configuration>
+					<useReleaseProfile>true</useReleaseProfile>
+					<releaseProfiles>release</releaseProfiles>
+					<autoVersionSubmodules>true</autoVersionSubmodules>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
+
+	<distributionManagement>
+		<repository>
+			<id>bintray</id>
+			<url>https://api.bintray.com/maven/o-nix/maven/netty-spring</url>
+		</repository>
+	</distributionManagement>
 </project>
