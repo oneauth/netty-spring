@@ -35,7 +35,7 @@
 
 	<scm>
 		<connection>scm:git:https://github.com/o-nix/netty-spring.git</connection>
-		<developerConnection>scm:git:git@github.com:o-nix/netty-spring.git</developerConnection>
+		<developerConnection>scm:git:https://github.com/o-nix/netty-spring.git</developerConnection>
 		<url>https://github.com/o-nix/netty-spring</url>
 	</scm>
 
