@@ -34,3 +34,17 @@ private NettyClient socksClient;
 
 socksClient.connect("localhost", 1080);
 ```
+
+## Maven
+
+```xml
+<repositories>
+    <repository>
+        <id>bintray</id>
+        <url>http://jcenter.bintray.com</url>
+        <snapshots>
+            <enabled>false</enabled>
+        </snapshots>
+    </repository>
+</repositories>
+```
