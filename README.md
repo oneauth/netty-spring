@@ -47,4 +47,12 @@ socksClient.connect("localhost", 1080);
         </snapshots>
     </repository>
 </repositories>
+
+<dependencies>
+    <dependency>
+        <groupId>me.o_nix</groupId>
+    	<artifactId>netty-spring</artifactId>
+    	<version>1.0</version>
+    </dependency>
+</dependencies>
 ```
